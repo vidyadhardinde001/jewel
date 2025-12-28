@@ -430,7 +430,7 @@ export default function InteractivePhotoGallery() {
                     </h2>
                     
                     {/* Date and Location */}
-                    <div className="flex flex-wrap gap-4 mb-6">
+                    {/* <div className="flex flex-wrap gap-4 mb-6">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4 text-pink-500" />
                         <span className="text-gray-600">{selectedPhoto.date}</span>
@@ -439,10 +439,10 @@ export default function InteractivePhotoGallery() {
                         <MapPin className="w-4 h-4 text-pink-500" />
                         <span className="text-gray-600">{selectedPhoto.location}</span>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Story */}
-                    <div className="mb-8">
+                    {/* <div className="mb-8">
                       <div className="flex items-center gap-2 mb-3">
                         <MessageCircle className="w-5 h-5 text-pink-500" />
                         <h3 className="text-lg font-semibold text-gray-700">Our Story</h3>
@@ -450,7 +450,7 @@ export default function InteractivePhotoGallery() {
                       <p className="text-gray-600 leading-relaxed">
                         {currentStory}
                       </p>
-                    </div>
+                    </div> */}
 
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-3">

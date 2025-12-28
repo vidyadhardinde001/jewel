@@ -1,13 +1,21 @@
-import React from 'react';
+"use client";
 
-const FooterSection: React.FC = () => {
+import Image from "next/image";
+
+export const QuoteSection = () => {
   return (
-    <section className="relative bg-white text-gray-800  px-4 sm:px-6 lg:px-8 mt-0 mb-0">
-      {/* Top Section */}
-      <div className="relative max-w-screen-xl mx-auto">
+    <section className="bg-white">
+      <div className="w-full px-0">
+        <div className="relative w-full aspect-[2/1] overflow-hidden shadow-xl">
+          <Image
+            src="/images/collage.jpg"
+            alt="Memories Collage"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
     </section>
   );
 };
-
-export default FooterSection;

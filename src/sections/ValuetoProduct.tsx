@@ -251,7 +251,7 @@ export default function HerPhotoGallery() {
           className="mt-12 text-center"
         >
           <p className="text-gray-600 italic text-base md:text-lg font-handwriting max-w-2xl mx-auto px-4">
-            Asar ye kaisa teri chahat ka mujhpe hai hogaya...zarra zarra mere dil ka ab tujh mein hi kho gaya 🌸
+            Asar ye kaisa teri chahat ka mujhpe hogaya...zarra zarra mere dil ka ab tujh mein hi kho gaya 🌸
           </p>
           <div className="mt-4 flex justify-center gap-3">
             {["📸", "💖", "✨", "🌟", "💎"].map((emoji, i) => (
