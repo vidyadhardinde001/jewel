@@ -236,9 +236,9 @@ export const Hero = () => {
                     Tujha ha hasra chehra baghitla ki majhi sakal hote…
                     ani tujhya sundar kesan madhech majhi ratra virghalte 💕
                     <br />
-                    "Dolyat tu ch saajni,
+                    &quot;Dolyat tu ch saajni,
                     sukhacha sparsh tu nava…
-                    tujhya vina ure na arth hya jivana"❤️
+                    tujhya vina ure na arth hya jivana&quot;❤️
                     
                   </p>
                 </div>
@@ -282,7 +282,7 @@ export const Hero = () => {
                 {/* Divider */}
                 <div className="pt-8 border-t border-pink-200 animate-fade-in-up" style={{ animationDelay: "1s" }}>
                   <p className="text-pink-600 italic text-center font-handwriting text-2xl">
-                   "Jab tak jahan mein subah shaam hai...tab tak mere naam tu"
+                   &quot;Jab tak jahan mein subah shaam hai...tab tak mere naam tu&quot;
                   </p>
                 </div>
               </div>
