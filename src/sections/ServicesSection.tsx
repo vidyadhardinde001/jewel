@@ -368,9 +368,7 @@ export default function PlayHeartToVideo() {
                     group/back
                   "
                 >
-                  <span className="group-hover/back:rotate-180 transition-transform duration-300">↺</span>
-                  Watch Again
-                  <span className="text-xl group-hover/back:animate-bounce">💖</span>
+
                 </motion.button>
               </div>
             </motion.div>

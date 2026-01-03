@@ -19,14 +19,14 @@ export const Hero = () => {
       emoji: heartEmojis[Math.floor(Math.random() * heartEmojis.length)],
     }));
     setHearts(newHearts);
-    
+
     // Trigger entrance animations
     setTimeout(() => setIsLoaded(true), 100);
   }, []);
 
   return (
     <section className="relative w-full min-h-screen py-12 md:py-24 bg-gradient-to-br from-pink-50 via-rose-50 to-rose-100 px-4 md:px-6 overflow-hidden">
-      
+
       {/* ✨ Animated Background Hearts */}
       {hearts.map((heart) => (
         <div
@@ -137,25 +137,25 @@ export const Hero = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 pt-8">
-        
+
         {/* PHOTO CARD with enhanced animations */}
         <div className={`relative z-20 w-[260px] md:w-[320px] lg:w-[300px] xl:w-[340px] animate-float shadow-2xl order-2 lg:order-1 lg:mt-20 group hover:scale-[1.02] transition-all duration-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          
+
           {/* Animated Tape */}
           <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-gradient-to-r from-pink-200 via-rose-200 to-pink-200 opacity-90 rotate-[-2deg] animate-pulse shadow-lg rounded-sm" />
-          
+
           {/* Photo Frame with Glow */}
           <div className="relative bg-white rounded-2xl border-4 border-white shadow-[0_25px_70px_-15px_rgba(236,72,153,0.4)] p-4 rotate-[-3deg] group-hover:rotate-[-1deg] transition-all duration-500 group-hover:shadow-[0_35px_80px_-20px_rgba(236,72,153,0.6)]">
             {/* Frame Glow Effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 to-rose-400 rounded-3xl opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500" />
-            
+
             <div className="relative w-full h-[280px] md:h-[350px] rounded-xl overflow-hidden">
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-pink-500/20 via-transparent to-transparent z-10" />
-              
+
               {/* Photo Shine Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 z-20" />
-              
+
               <Image
                 src="/images/her.jpeg"
                 alt="Her photo"
@@ -164,16 +164,16 @@ export const Hero = () => {
                 priority
               />
             </div>
-            
+
             {/* Photo Caption */}
             <div className="mt-4 text-center relative z-30">
-              <p className="text-pink-600 font-handwriting text-xl animate-glow-text">My Sunshine ☀️</p>
+              <p className="text-pink-600 font-handwriting text-xl animate-glow-text">My Lifeline</p>
               <div className="flex justify-center space-x-2 mt-2">
                 {[...Array(5)].map((_, i) => (
-                  <span 
-                    key={i} 
-                    className="text-xl animate-bounce-heart" 
-                    style={{ 
+                  <span
+                    key={i}
+                    className="text-xl animate-bounce-heart"
+                    style={{
                       animationDelay: `${i * 0.1}s`,
                       color: ["#f472b6", "#ec4899", "#db2777", "#be185d", "#9d174d"][i]
                     }}
@@ -194,72 +194,123 @@ export const Hero = () => {
 
         {/* LOVE LETTER CARD with romantic animations */}
         <div className={`relative z-10 max-w-5xl lg:max-w-2xl xl:max-w-3xl bg-gradient-to-br from-pink-500 via-rose-400 to-pink-400 rounded-3xl p-6 md:p-8 shadow-2xl order-1 lg:order-2 group hover:shadow-3xl transition-all duration-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          
+
           {/* Floating Envelope Seal */}
           <div className="absolute -top-5 -right-5 w-20 h-20 bg-gradient-to-br from-red-400 via-pink-500 to-rose-500 rounded-full flex items-center justify-center shadow-xl animate-float-slow z-40 group-hover:scale-110 transition-transform duration-300">
             <span className="text-3xl animate-pulse">💌</span>
           </div>
 
           {/* Wax Seal */}
-          
+
 
           {/* Letter Paper with subtle pattern */}
-          <div className="bg-[#fffafc] rounded-2xl p-6 md:p-10 shadow-inner border border-pink-100 relative overflow-hidden">
-            {/* Paper Texture Pattern */}
-            <div className="absolute inset-0 opacity-[0.03] bg-pattern"></div>
-            
-            {/* Letter Content */}
+          <div className="bg-[#fffafc] rounded-3xl p-6 md:p-12 shadow-inner border border-pink-100 relative overflow-hidden">
+            {/* Paper Texture */}
+            <div className="absolute inset-0 opacity-[0.03] bg-pattern pointer-events-none"></div>
+
             <div className="relative z-10">
-              <h3 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-rose-600 to-pink-600 mb-8 animate-glow-text font-handwriting text-center">
+              {/* Title */}
+              <h3 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text 
+      bg-gradient-to-r from-pink-600 via-rose-600 to-pink-600 
+      mb-10 text-center font-handwriting animate-glow-text">
                 To My Dearest Love 💕
               </h3>
 
-              <div className="space-y-6 text-gray-800 leading-relaxed text-base md:text-lg font-medium">
-                <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-                  <span className="text-3xl text-pink-500 mr-3 animate-float">✨</span>
-                  <span>From the moment you came into my life, everything felt warmer, brighter, and more meaningful than I ever dreamed possible.</span>
-                </div>
-                
-                <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                  <span className="text-3xl text-pink-500 mr-3 animate-float" style={{ animationDelay: '0.5s' }}>🌙</span>
-                  <span>Your smile became my favorite place to rest, your laughter my favorite melody, and your love my greatest blessing.</span>
+              {/* Letter */}
+              <div className="space-y-8 text-gray-800 leading-relaxed text-base md:text-lg font-medium">
+
+                <div className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                  <p>
+                    <span>
+                      Happy Birthday my Dearest <strong>Pihuuu</strong> 🫠♥️♥️😍😍👸🫶
+                      <br />
+                      <br />
+                      Tujha he nava varsh tujhya sathi khup saari happiness gheun yeu de,
+                      ani tu nehmi ashich khush rahavi ✨
+                    </span>
+                  </p>
                 </div>
 
-                <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-                  <span className="text-3xl text-pink-500 mr-3 animate-float" style={{ animationDelay: '1s' }}>💫</span>
-                  <span>This little corner of the internet is my way of saying what words often fail to express — that I choose you, today and always, in every lifetime.</span>
+                <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+                  <p>
+                    Tujha ha hasra chehra baghitla ki majhi sakal hote…
+                    ani tujhya sundar kesan madhech majhi ratra virghalte 💕
+                    <br />
+                    "Dolyat tu ch saajni,
+                    sukhacha sparsh tu nava…
+                    tujhya vina ure na arth hya jivana"❤️
+                    
+                  </p>
                 </div>
 
-                <div className="pt-6 border-t border-pink-200 mt-6 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-                  <p className="text-pink-600 italic text-center font-handwriting text-2xl leading-relaxed">
-                    With all my heart, forever and always 💖
+                <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+                  <p>
+                    Asa vatta fakt tujhya kadhech baghat rahave,
+                    divas ani ratra donhi tujhya sobat rahave
+                    tula khup saare kisses dyave 😘
+                    ani majha urlela ayushya fakt tujhya sobat jagava… ❣️
+                  </p>
+                </div>
+
+                <div className="animate-fade-in-up" style={{ animationDelay: "0.55s" }}>
+                  <p>
+                    Tu majhi saglyat favorite ahes — ani nehmi rahnar 💞
+                  </p>
+                </div>
+
+                <div className="animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
+                  <p>
+                    Majha tujhyavarcha prem asach vadhat rahude…
+                    ani pratek divshi tu mala ajun ajun avdhat rahavi —
+                    hich majhi prarthana 🫠
+                  </p>
+                </div>
+
+                <div className="animate-fade-in-up" style={{ animationDelay: "0.85s" }}>
+                  <p>
+                   Apan doghe asach kayam sobat rahu...ani tujha bday karta karta mla ek divas aplya bala cha pn bday karayla milude🫠🎂🍼
+                  </p>
+                </div>
+
+                <div className="animate-fade-in-up" style={{ animationDelay: "0.85s" }}>
+                  <p>
+                   Pratek ayushyat tu mla nehmi tujhya baaju ne pahshil...kadhi dukhi aslis tr tujhya chehrya var hasu anayla...kadhi kuthe adaklis tr tula savrayla...kuthe padlis tr tula sambhalayla...tujhya pratek sukha dukhat, mi nehmi tujhya paathi shi rahil❤️
+                  </p>
+                </div>
+
+
+                {/* Divider */}
+                <div className="pt-8 border-t border-pink-200 animate-fade-in-up" style={{ animationDelay: "1s" }}>
+                  <p className="text-pink-600 italic text-center font-handwriting text-2xl">
+                   "Jab tak jahan mein subah shaam hai...tab tak mere naam tu"
                   </p>
                 </div>
               </div>
 
-              {/* Animated Button */}
-              <div className="mt-10 flex justify-center">
-                <button className="group/btn relative inline-flex items-center justify-center bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 text-white px-10 py-4 rounded-full font-bold text-xl hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-3xl animate-pulse-slow overflow-hidden">
-                  <span className="relative z-20 flex items-center">
-                    Always & Forever 
-                    <span className="ml-3 text-2xl group-hover/btn:animate-spin-slow group-hover/btn:scale-125 transition-all duration-300">💕</span>
+              {/* Button */}
+              <div className="mt-12 flex justify-center">
+                <button
+                  className="group relative inline-flex items-center justify-center 
+        bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 
+        text-white px-12 py-4 rounded-full font-bold text-xl 
+        transition-all duration-500 transform hover:scale-105 
+        shadow-2xl hover:shadow-pink-300/40 animate-pulse-slow overflow-hidden"
+                >
+                  <span className="relative z-10 flex items-center">
+                    Always & Forever
+                    <span className="ml-3 text-2xl group-hover:scale-125 transition-transform duration-300">
+                      💕
+                    </span>
                   </span>
-                  
-                  {/* Button Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 rounded-full blur-md" />
-                  
-                  {/* Button Sparkles */}
-                  <span className="absolute -top-2 -left-2 text-2xl animate-sparkle-fast">✨</span>
-                  <span className="absolute -top-2 -right-2 text-2xl animate-sparkle-fast" style={{ animationDelay: '0.3s' }}>✨</span>
-                  <span className="absolute -bottom-2 -left-2 text-2xl animate-sparkle-fast" style={{ animationDelay: '0.6s' }}>✨</span>
-                  <span className="absolute -bottom-2 -right-2 text-2xl animate-sparkle-fast" style={{ animationDelay: '0.9s' }}>✨</span>
-                  
-                  {/* Button Border Animation */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 animate-ping-slow" />
+
+                  {/* Glow */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-pink-400 via-rose-400 to-pink-500 
+          opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md rounded-full" />
                 </button>
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
